@@ -20,9 +20,6 @@
   <artifactId>canary-api</artifactId>
   <version>${revision}</version>
   <packaging>jar</packaging>
-  <properties>
-        <revision>0-SNAPSHOT</revision>
-    </properties>
   <name>Canary API - SpringBoot</name>
   <description>Demo project for Spring Boot</description>
   <scm>
@@ -50,6 +47,7 @@
     <maven.compiler.target>${java.version}</maven.compiler.target> <!-- REQUIRED -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <appengine.maven.plugin>1.3.2</appengine.maven.plugin>
+   <revision>0-SNAPSHOT</revision>
   </properties>
 
   <dependencies>
