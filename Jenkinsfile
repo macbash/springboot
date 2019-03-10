@@ -62,7 +62,7 @@ stage('Deploy') {
  if(env.BRANCH_NAME == 'master'){
   paramvalue="1.0.4-${env.BUILD_NUMBER}-RELEASE"
   println paramvalue
- build job: 'Stag-Release', parameters: [[$class: 'StringParameterValue', name: 'ARTIFACT_NAME', value: paramvalue]]
+ build job: 'Stag-Release', parameters: [[$class: 'StringParameterValue', name: 'ARTIFACT_VERSION', value: paramvalue]]
 } else {
   paramvalue="1.0.4-b${env.BUILD_NUMBER}-SNAPSHOT"
   println paramvalue
