@@ -18,9 +18,11 @@
 
   <groupId>com.example.canarayapi</groupId>
   <artifactId>canary-api</artifactId>
-  <version>1.0.4-SNAPSHOT</version>
+  <version>${revision}</version>
   <packaging>jar</packaging>
-
+  <properties>
+        <revision>0-SNAPSHOT</revision>
+    </properties>
   <name>Canary API - SpringBoot</name>
   <description>Demo project for Spring Boot</description>
   <scm>
@@ -67,6 +69,13 @@
 
   <build>
     <plugins>
+     <plugin>
+                <artifactId>maven-scm-plugin</artifactId>
+                <version>1.9.4</version>
+                <configuration>
+                    <tag>${project.artifactId}-${project.version}</tag>
+                </configuration>
+            </plugin>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
