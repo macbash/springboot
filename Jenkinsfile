@@ -9,7 +9,7 @@ if(env.BRANCH_NAME == 'master'){
  sh "mvn deploy scm:tag -Drevision=$BUILD_NUMBER-RELEASE"
 } else {
 def pom = readMavenPom file: 'pom.xml'
-def version = pom.version.replace("\${revision}", "SNAPSHOT")
+def version = pom.version.replace("\${revision}", "1-SNAPSHOT")
 println version
 pom.version = version
 writeMavenPom model: pom
