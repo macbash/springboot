@@ -8,7 +8,13 @@ def pom = readMavenPom file: 'pom.xml'
 def version = pom.version.replace("-SNAPSHOT", ".${currentBuild.number}")
 println version
 println pom.version
-  sh "mvn deploy scm:tag -Drevision=$BUILD_NUMBER-RELEASE"
+
+if(env.BRANCH_NAME == 'master'){
+ sh "mvn deploy scm:tag -Drevision=$BUILD_NUMBER-RELEASE"
+} else {
+ sh "mvn deploy -Drevision=$BUILD_NUMBER-SNAPSHOT"
+}
+
 }
 
 }
