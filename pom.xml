@@ -31,13 +31,13 @@
   <distributionManagement>
     <repository>
         <id>central</id>
-        <name>83b5fc0b653a-releases</name>
-        <url>http://ec2-3-238-85-160.compute-1.amazonaws.com:8082/artifactory/canaray-release</url>
+        <name>ip-172-31-76-93.ec2.internal-releases</name>
+        <url>http://ec2-3-238-85-160.compute-1.amazonaws.com:8081/artifactory/canaray-release</url>
     </repository>
     <snapshotRepository>
         <id>snapshots</id>
-        <name>83b5fc0b653a-snapshots</name>
-        <url>http://ec2-3-238-85-160.compute-1.amazonaws.com:8082/artifactory/canaray-release</url>
+        <name>ip-172-31-76-93.ec2.internal-snapshots</name>
+        <url>http://ec2-3-238-85-160.compute-1.amazonaws.com:8081/artifactory/canaray-release</url>
     </snapshotRepository>
 </distributionManagement>
   <properties>
