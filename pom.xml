@@ -37,7 +37,7 @@
     <snapshotRepository>
         <id>snapshots</id>
         <name>ip-172-31-76-93.ec2.internal-snapshots</name>
-        <url>http://172.31.76.93:8082/artifactory/canaray-release</url>
+        <url>http://172.31.76.93:8082/artifactory/canaray-snapshot</url>
     </snapshotRepository>
 </distributionManagement>
   <properties>
