@@ -10,9 +10,9 @@ println version
 println pom.version
 
 if(env.BRANCH_NAME == 'master'){
- sh "mvn deploy scm:tag -Drevision=$BUILD_NUMBER-RELEASE"
+ sh "mvn deploy -X scm:tag -Drevision=$BUILD_NUMBER-RELEASE"
 } else {
- sh "mvn deploy -Drevision=$BUILD_NUMBER-SNAPSHOT"
+ sh "mvn deploy -X -Drevision=$BUILD_NUMBER-SNAPSHOT"
 }
 
 }
