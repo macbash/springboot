@@ -6,6 +6,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set env
-      run: echo "GITHUB_SHA_SHORT=$(echo $GITHUB_SHA | cut -c 1-6)" >> $GITHUB_ENV
+      run: exit 1 && if [ $? -ne 0 ]; then echo "TF_PLAN_STATE=FAIL" >> $GITHUB_ENV; else  echo "TF_PLAN_STATE=PASS" >> $GITHUB_ENV;
     - name: Test
-      run: echo $GITHUB_SHA_SHORT
+      run: echo $TF_PLAN_STATE
