@@ -6,7 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set env
-      run: if [ $? -ne 0 ]; then exit 1; fi
+      run: if [ $? -ne 0 ]; then touch RESULT && exit 1; fi
     - name: file creation
       uses: actions/upload-artifact@v2
       with:
