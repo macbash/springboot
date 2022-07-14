@@ -6,7 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set env
-      run: if [ $? -ne 0 ]; then echo "TF_PLAN_STATE=FAIL" >> $GITHUB_ENV; else  echo "TF_PLAN_STATE=PASS" >> $GITHUB_ENV; fi && echo $GITHUB_ENV | tee RESULT
+      run: if [ $? -ne 0 ]; then echo "TF_PLAN_STATE=FAIL" >> $GITHUB_ENV; else  echo "TF_PLAN_STATE=PASS" >> $GITHUB_ENV; fi && echo $GITHUB_ENV | tee RESULT && exit 0
     - name: get env
       run: |
         if [ $TF_PLAN_STATE == "FAIL" ]; then
