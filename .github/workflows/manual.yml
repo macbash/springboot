@@ -9,10 +9,12 @@ jobs:
       run: if [ $? -ne 0 ]; then echo "TF_PLAN_STATE=FAIL" >> $GITHUB_ENV; fi && echo $GITHUB_ENV | tee RESULT && exit 0
     - name: get env
       run: |
+        if [ ! -z $TF_PLAN_STATE ]; then
         if [ $TF_PLAN_STATE == "FAIL" ]; then
          echo "Failed"
-        else
-         echo "Pass"
+        fi
+          else
+         echo "Passed"
         fi
     - name: file creation
       uses: actions/upload-artifact@v2
