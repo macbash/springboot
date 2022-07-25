@@ -13,4 +13,5 @@ jobs:
     - name: get env
       run: |
         echo $url
+        curl -v $url
       
