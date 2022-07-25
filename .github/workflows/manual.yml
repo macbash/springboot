@@ -6,12 +6,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set env
-      run: if [ $? -eq 0 ]; then touch RESULT && exit 1; fi
-    - name: file creation
-      uses: actions/upload-artifact@v2
-      if: always()
-      with:
-        name: file
-        path: |
-          RESULT
+      run: |
+        url="https://google.com"
+        echo "::add-mask::$url"
+        echo url=$url >> $GITHUB_ENV  
+    - name: get env
+      run: |
+        curl -v https://$url 
       
