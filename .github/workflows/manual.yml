@@ -12,5 +12,5 @@ jobs:
         echo url=$url >> $GITHUB_ENV  
     - name: get env
       run: |
-        curl -v https://$url 
+        echo $url
       
