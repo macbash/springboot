@@ -19,6 +19,6 @@ jobs:
           jsonlint -p ./test/*.json
       - name: lint
         run: |
-          jsonlint -c -p ./test/sample.json
+          jsonlint -c -p ./test/*.json
           
       
