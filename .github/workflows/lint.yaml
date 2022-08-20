@@ -16,5 +16,6 @@ jobs:
       - name: Install Node.js dependencies
         run: |
           npm install -g jsonlint-cli
+          jsonlint-cli ./test/*.json
           
       
