@@ -15,7 +15,7 @@ jobs:
       # ESLint and Prettier must be in `package.json`
       - name: Install Node.js dependencies
         run: |
-          npm install -g jsonlint-cli
-          jsonlint-cli ./test/*.json
+          npm install jsonlint -g
+          jsonlint ./test/*.json
           
       
