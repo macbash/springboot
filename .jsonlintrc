@@ -1,0 +1,7 @@
+{
+  "validate": "", // schema uri to validate against
+  "ignore": ["node_modules/**/*"], // glob patterns to ignore
+  "indent": "", // indent to use for pretty-printed output
+  "env": "json-schema-draft-04", // json schema env version to use
+  "pretty": true // pretty-print formatted json if quiet is false
+}
