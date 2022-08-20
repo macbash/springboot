@@ -16,6 +16,6 @@ jobs:
       - name: Install Node.js dependencies
         run: |
           sudo apt install jsonlint
-          jsonlint -v ./test/*.json
+          /usr/local/bin/jsonlint -v ./test/*.json
           
       
