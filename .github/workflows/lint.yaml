@@ -17,5 +17,8 @@ jobs:
         run: |
           npm install jsonlint -g
           jsonlint -p ./test/*.json
+      - name: lint
+        run: |
+          jsonlint -c -v -p ./test/*.json
           
       
