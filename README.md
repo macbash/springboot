@@ -1,4 +1,4 @@
-# Canary-spring-boot
+# Canary-spring-boot ![](https://github.com/macbash/springboot/workflows/testing/badge.svg)
 ## springboot
 ```mermaid
 flowchart TD
