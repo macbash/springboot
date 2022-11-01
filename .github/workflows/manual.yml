@@ -1,0 +1,17 @@
+name: my workflow
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set env
+      run: |
+        url="https://google.com"
+        echo "::add-mask::$url"
+        echo url=$url >> $GITHUB_ENV  
+    - name: get env
+      run: |
+        echo $url
+        curl -v $url
+      

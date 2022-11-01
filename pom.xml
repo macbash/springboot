@@ -30,20 +30,15 @@
   <distributionManagement>
     <repository>
         <id>central</id>
-        <name>ae0450ba54f6-releases</name>
-        <url>http://localhost:9998/artifactory/canaray-release</url>
+        <url>http://localhost:8081/artifactory/canaray-release</url>
     </repository>
     <snapshotRepository>
         <id>snapshots</id>
-        <name>ae0450ba54f6-snapshots</name>
-        <url>http://localhost:9998/artifactory/canaray-snapshots</url>
-        <snapshots>
-        <enabled>true</enabled>
-        <updatePolicy>never</updatePolicy>
-    </snapshots>
+
+        <url>http://localhost:8081/artifactory/canaray-snapshot</url>
+
     </snapshotRepository>
 </distributionManagement>
-
   <properties>
     <java.version>1.8</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source> <!-- REQUIRED -->
@@ -57,7 +52,7 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
-      <version>2.1.1.RELEASE</version>
+      <version>2.5.12</version>
     </dependency>
 
     <dependency>
